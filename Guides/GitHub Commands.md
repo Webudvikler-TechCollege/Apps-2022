@@ -18,7 +18,7 @@ Den url kan du kopiere fra ethvert GitHub repository, ved at klikke på den grø
 
 Dette vil downloade en kopi af projektet til en valgfri mappe på din computer, så du kan begynde at arbejde på projektet  lokalt. 
 ___
-## 2. Git branch
+## 2. Git Branch
 *Branches* (kan oversættes til filialer på dansk) er meget vigtige i git-verdenen. Ved at bruge branches er flere udviklere i stand til at arbejde parallelt med det samme projekt samtidigt. Vi kan bruge kommandoen `git branch` til at oprette, liste og slette grene.
 
 **Eksempel på oprettelse af en ny filial:**
@@ -38,7 +38,7 @@ Sletning af en branch:
 % git branch -d <branch-name>
 ```
 ___
-## 3. Git checkout
+## 3. Git Checkout
 Dette er også en af de mest brugte Git kommandoer. For at arbejde i en branch skal du først skifte til den. Vi bruger mest git checkout til at skifte fra en branch til en anden. Vi kan også bruge det til at tjekke filer og commits.
 ```
 % git checkout <navn-paa-din-branch>
@@ -55,7 +55,7 @@ Den branch, du vil tjekke ud, bør eksistere i dit lokale repository.
 ```
 Denne kommando opretter en ny branch i dit lokale repository (-b står for branch) og tjekker branchen ud til ny lige efter den er blevet oprettet.
 ___
-## 4. Git-status
+## 4. Git Status
 `Git status` kommandoen giver os al den nødvendige information om den aktuelle branch.
 ```
 % git status
@@ -88,7 +88,7 @@ Når du tilføjer en fil med `git add` vil den blive registreret som *staged*, b
 
 > Vigtigt: Git add-kommandoen ændrer ikke dit repository, og ændringerne gemmes ikke, før du kører kommandoen `git commit`.
 ___
-## 6. Git commit
+## 6. Git Commit
 Dette er måske den mest brugte kommando i Git. Når vi når et bestemt punkt i en udvikling, vil vi gerne gemme vores ændringer (måske efter en specifik opgave eller problem).
 
 Git commit er som at sætte et kontrolpunkt i udviklingsprocessen, som du kan gå tilbage til senere, hvis det er nødvendigt.
@@ -119,7 +119,7 @@ Men hvis din branch er helt ny, skal du også uploade den med følgende kommando
 ```
 > Vigtigt: Git push uploader kun ændringer, der er committed.
 ___
-8. Git Pull
+## 8. Git Pull
 `Git pull` kommandoen bruges til at hente opdateringer fra det eksterne repository. Denne kommando er en kombination af `git fetch` og `git merge`, hvilket betyder, at når vi bruger *git pull*, får den opdateringerne fra dit remote repository (*git fetch*) og anvender straks de seneste ændringer i din lokale repository (*git merge*).
 
 **Eksempel:**
@@ -128,7 +128,7 @@ git pull <remote-url>
 ```
 > Note: Denne handling kan forårsage konflikter, som du skal løse manuelt.
 ____
-## 10. Git Merge
+## 9. Git Merge
 Når du har er færdig med udviklingen i en branch - lad os kalde den for en udviklingsbranch, og alt fungerer fint, er det sidste trin at *merge* (fusionere) denne branch med den overordnede branch (som typisk hedder  *main*, *dev* eller *master*). Dette gøres med kommandoen *git merge*.
 
 Git merge implementerer din udviklingsbranch og alle dens commits ind i den overordnede masterbranch. Det er vigtigt at huske, at du skal placere dig i masterbranchen (*Eks: main eller master*), som du vil flette sammen med din udviklingsbranch.
@@ -149,7 +149,7 @@ Endelig kan du flette din udviklingsbranch sammen med din masterbranch:
 ```
 > Tip: Sørg for, at din udviklingsbranch har den nyeste version, før du slår dine branches sammen, ellers kan du opleve  konflikter eller andre uønskede problemer.
 ___
-### 10. Git Revert
+## 10. Git Revert
 Nogle gange er vi nødt til at fortryde de ændringer, vi har foretaget. Der er forskellige måder at fortryde vores ændringer lokalt eller eksternt (afhængigt af, hvad vi har brug for), men vi skal bruge kommandoerne med forsigtighed, da vi kan risikere at slette kodeblokke eller hele filer.
 
 En mere sikker måde, hvorpå vi kan fortryde vores commits, er ved at bruge `git revert`. For at se vores commit-historik skal vi først bruge gits log kommando:
