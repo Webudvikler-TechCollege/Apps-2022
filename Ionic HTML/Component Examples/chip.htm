@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ionic Only Eksempel</title>
+
+	<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+  <ion-chip>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-label color="secondary">Secondary Label</ion-label>
+  </ion-chip>
+  
+  <ion-chip color="secondary">
+    <ion-label color="dark">Secondary w/ Dark label</ion-label>
+  </ion-chip>
+  
+  <ion-chip disabled="true">
+    <ion-label>Disabled Chip</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-icon name="pin"></ion-icon>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-icon name="heart" color="dark"></ion-icon>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-label>Button Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-icon name="pin" color="primary"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>Avatar Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+</body>
+
+</html>
