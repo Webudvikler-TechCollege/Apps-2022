@@ -1,6 +1,14 @@
+import { IonCard } from "@ionic/react";
+import LoginForm from "../components/Auth/LoginForm";
+import { Page } from "../components/Layout/Layout";
+
 const Login = () => {
 	return (
-		<h1>Login</h1>
+		<Page title="Login" description="Log ind og få adgang til vores sang arkiv">
+			<IonCard>
+				<LoginForm />
+			</IonCard>
+		</Page>
 	)
 }
 

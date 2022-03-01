@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -33,9 +33,12 @@ const App: React.FC = () => {
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/" render={(props) => {
-          return loginData ? <Home /> : <Login />;
-        }}
+        <Route 
+          exact path="/" 
+          render={() => {
+              return loginData ? <Home /> : <Login />;
+            }
+          }
         ></Route>
       </IonRouterOutlet>
     </IonReactRouter>
