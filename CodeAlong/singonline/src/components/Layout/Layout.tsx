@@ -1,5 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
+import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
 import { useEffect } from "react"
+import { useParams } from "react-router"
 
 interface iPageProps {
 	title: string;
@@ -8,6 +9,7 @@ interface iPageProps {
 }
 
 const Page: React.FC<iPageProps> = ({ title, description, children }) => {
+	const { slug } = useParams<{slug: string}>()
 
 	useEffect(() => {
 		document.title = title;
@@ -23,6 +25,11 @@ const Page: React.FC<iPageProps> = ({ title, description, children }) => {
 				<IonHeader>
 					<IonToolbar color="primary">
 						<IonTitle>SingOnline</IonTitle>
+						{slug && (
+							<IonButtons slot="start">
+								<IonBackButton default-href="/"></IonBackButton>
+							</IonButtons>
+						)}
 					</IonToolbar>
 				</IonHeader>
 				<ContentWrapper >

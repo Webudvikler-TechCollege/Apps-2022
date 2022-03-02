@@ -20,7 +20,7 @@ const SongList: React.FC<{keyword: string}> = ({keyword}) => {
 		const getData = async () => {
 			const options = {
 				headers: {
-					Authorization: `Baerer ${loginData.access_token}`
+					Authorization: `Bearer ${loginData.access_token}`
 				}
 			}
 			const url = 'https://api.mediehuset.net/singonline/songs'

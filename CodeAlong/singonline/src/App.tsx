@@ -23,6 +23,7 @@ import './theme/variables.css';
 import { useAuth } from './components/Auth/AuthProvider';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Details from './pages/Details';
 
 setupIonicReact();
 
@@ -40,6 +41,10 @@ const App: React.FC = () => {
             }
           }
         ></Route>
+        <Route exact path="/:slug" 
+          render={() => {
+            return loginData ? <Details /> : <Login />
+          }}></Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
