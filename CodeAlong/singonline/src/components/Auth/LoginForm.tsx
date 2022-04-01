@@ -7,6 +7,7 @@ const LoginForm: React.FC = () => {
   const { loginData, setLoginData } = useAuth()
   const usernameRef = useRef<HTMLIonInputElement>(null)
   const passwordRef = useRef<HTMLIonInputElement>(null)
+  
 
   const handleLogin = async () => {
 	  //console.log(usernameRef.current!.value, passwordRef.current!.value);

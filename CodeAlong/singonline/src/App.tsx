@@ -24,6 +24,7 @@ import { useAuth } from './components/Auth/AuthProvider';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Details from './pages/Details';
+import Modal from './pages/Modal';
 
 setupIonicReact();
 
@@ -45,6 +46,10 @@ const App: React.FC = () => {
           render={() => {
             return loginData ? <Details /> : <Login />
           }}></Route>
+        <Route exact path="/modal">
+          <Modal />
+        </Route>
+
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
